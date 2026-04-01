@@ -1,2 +1,11 @@
 # Ignore environment files
 .env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Pipeline runtime outputs
+artifacts/
+logs/
