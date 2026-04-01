@@ -55,8 +55,8 @@ def get_client() -> anthropic.Anthropic:
 # ---------------------------------------------------------------------------
 # Core runner
 # ---------------------------------------------------------------------------
-DEFAULT_MODEL = "claude-opus-4-6"
-DEFAULT_MAX_TOKENS = 8096
+DEFAULT_MODEL = "claude-opus-4-5"
+DEFAULT_MAX_TOKENS = 16000
 
 
 def run_agent(
@@ -90,7 +90,6 @@ def run_agent(
     with client.messages.stream(
         model=model,
         max_tokens=max_tokens,
-        thinking={"type": "adaptive"},
         system=system_prompt,
         messages=[{"role": "user", "content": user_message}],
     ) as stream:
