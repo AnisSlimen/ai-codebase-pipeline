@@ -9,3 +9,4 @@ __pycache__/
 # Pipeline runtime outputs
 artifacts/
 logs/
+venv
